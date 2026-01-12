@@ -1,0 +1,199 @@
+:root {
+  --bg: #06080c;
+  --bg-overlay: rgba(6, 8, 12, 0.82);
+  --card: rgba(12, 16, 24, 0.78);
+  --accent: #7fb4ff;      /* azul claro */
+  --accent-soft: #a8caff;
+  --text: #e6ecf5;
+  --muted: #9aa6bf;
+  --border: rgba(255,255,255,0.08);
+  --radius: 20px;
+  --shadow: 0 30px 80px rgba(0,0,0,0.55);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url("books-bg.jpg") center / cover no-repeat;
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+/* =====================
+   CONTAINER PRINCIPAL
+===================== */
+
+.landing-container {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* =====================
+   HERO / FORM
+===================== */
+
+.hero {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius);
+  padding: 3rem 2.5rem;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+
+  display: grid;
+  gap: 1.6rem;
+}
+
+.badge {
+  width: fit-content;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+/* =====================
+   FORMULÁRIO
+===================== */
+
+.onboarding-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 420px;
+}
+
+.onboarding-form label {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.onboarding-form input {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  color: var(--text);
+  outline: none;
+}
+
+.onboarding-form input::placeholder {
+  color: #7f8aa3;
+}
+
+.onboarding-form input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* =====================
+   BOTÃO
+===================== */
+
+.onboarding-form button {
+  margin-top: 0.8rem;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-soft)
+  );
+  color: #05070c;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.onboarding-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(127,180,255,0.35);
+}
+
+/* =====================
+   TEXTO AUXILIAR
+===================== */
+
+.helper-text {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+/* =====================
+   CONTEXTO / BENEFÍCIOS
+===================== */
+
+.context {
+  display: grid;
+}
+
+.benefits {
+  list-style: none;
+  display: grid;
+  gap: 1.2rem;
+  max-width: 600px;
+}
+
+.benefits li {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.benefits strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+
+@media (min-width: 768px) {
+  .landing-container {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+
+  .context {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 3.5rem 3rem;
+  }
+}

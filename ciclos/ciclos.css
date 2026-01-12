@@ -1,0 +1,335 @@
+/* =====================================================
+   FONTES — BIBLIOTECA CLÁSSICA
+===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* =====================================================
+   VARIÁVEIS — AZUL MARINHO & DOURADO
+===================================================== */
+:root {
+  --navy-deep: #0b1320;
+  --navy-mid: #121c2f;
+  --navy-soft: #1a2540;
+
+  --gold: #a88a27;
+  --gold-soft: rgba(212, 175, 55, 0.35);
+  --gold-dim: #a88a2d;
+
+  --parchment: #e6e1d6;
+  --text-dim: #9aa4b2;
+  --border-ink: #243252;
+}
+
+/* =====================================================
+   RESET + BASE
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, var(--navy-soft) 0%, var(--navy-deep) 75%);
+  color: var(--parchment);
+  font-family: 'EB Garamond', serif;
+  min-height: 100vh;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   PROGRESSO DO DIA
+===================================================== */
+.day-progress {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+}
+
+.day-progress-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.day-progress-bar {
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  box-shadow: 0 0 16px var(--gold-soft);
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+/* =====================================================
+   TOPO — RESUMO
+===================================================== */
+.top-summary {
+  max-width: 1100px;
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.05rem;
+}
+
+.summary-item .label {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-right: 6px;
+}
+
+.summary-item strong {
+  color: var(--gold);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+.dashboard {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+}
+
+/* =====================================================
+   PAINÉIS — MANUSCRITO NOTURNO
+===================================================== */
+.panel {
+  background: rgba(18, 28, 47, 0.65);
+  border: 1px solid var(--border-ink);
+  padding: 28px;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.panel::after {
+  content: "✦";
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.panel h2 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-ink);
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   HORAS SEMANAIS
+===================================================== */
+.weekly-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+/* =====================================================
+   STEPPERS — PRECISÃO DOURADA
+===================================================== */
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepper-btn {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  transition: 0.3s;
+}
+
+.stepper-btn:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+  box-shadow: 0 0 14px var(--gold-soft);
+}
+
+input[type="number"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--gold);
+  color: var(--parchment);
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem;
+  width: 64px;
+  text-align: center;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-bottom-color: #f0d77a;
+}
+
+/* =====================================================
+   DIAS DA SEMANA
+===================================================== */
+.daily-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.day-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-label {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* =====================================================
+   BOTÃO FIXO
+===================================================== */
+.recalculate-fixed {
+  margin-top: 28px;
+  width: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--gold-dim));
+  color: var(--navy-deep);
+  border: none;
+  padding: 12px;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.recalculate-fixed:hover {
+  box-shadow: 0 0 24px var(--gold-soft);
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   MATÉRIAS
+===================================================== */
+.subjects-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+#subjectsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.subject-card {
+  background: rgba(11, 19, 32, 0.7);
+  border: 1px solid var(--border-ink);
+  padding: 16px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subject-card strong {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+}
+
+.subject-card span {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+/* Barra de progresso da matéria */
+.subject-progress {
+  width: 100%;
+  height: 4px;
+  background: var(--border-ink);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.subject-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  box-shadow: 0 0 12px var(--gold-soft);
+  transition: width 0.3s ease;
+}
+
+/* =====================================================
+   ADICIONAR MATÉRIA
+===================================================== */
+.add-subject {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 10px;
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-subject:hover {
+  background: var(--gold);
+  color: var(--navy-deep);
+  box-shadow: 0 0 16px var(--gold-soft);
+}
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px;
+  }
+
+  .top-summary {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* =====================================================
+   SCROLLBAR — NOTURNA
+===================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-ink);
+  border: 2px solid var(--navy-deep);
+}

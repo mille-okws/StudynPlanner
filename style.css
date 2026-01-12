@@ -1,0 +1,74 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* O segredo da centralização total */
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Ativa o Flexbox no corpo todo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+
+/* Faixa Azul Centralizada */
+.hero {
+    background-color: rgba(0, 51, 102, 0.85); /* Azul escuro com transparência */
+    color: white;
+    width: 100%; /* A faixa atravessa a tela lateralmente */
+    padding: 80px 200px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+/* Estilização do Botão */
+.btn-principal {
+    display: inline-block;
+    background-color: #007bff; /* Azul vibrante */
+    color: white;
+    padding: 18px 45px;
+    text-decoration: none;
+    border-radius: 50px; /* Botão mais arredondado/moderno */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-principal:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* Efeito de levante ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Esconder Header/Footer se não forem necessários no centro */
+header, footer {
+    display: none; 
+}
