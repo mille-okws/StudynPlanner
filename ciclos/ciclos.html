@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ciclo de Estudos — Studyn Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="ciclos.css">
+</head>
+
+<body>
+
+  <!-- PROGRESSO DO DIA -->
+  <div class="day-progress">
+    <div class="day-progress-bar" id="dayProgressBar"></div>
+    <span class="day-progress-label" id="dayProgressLabel">
+      0% do dia organizado
+    </span>
+  </div>
+
+  <!-- TOPO -->
+  <header class="top-summary">
+    <div class="summary-item">
+      <span class="label">Horas semanais</span>
+      <strong id="weeklyHoursDisplay">0h</strong>
+    </div>
+
+    <div class="summary-item">
+      <span class="label">Horas já programadas</span>
+      <strong id="programmedHoursDisplay">0h</strong>
+    </div>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- COLUNA 1 — TEMPO -->
+    <section class="panel hours-config">
+
+      <h2>Tempo disponível</h2>
+
+      <!-- DIAS DA SEMANA -->
+      <div class="daily-hours-list">
+
+        <div class="day-row">
+          <span class="day-label">Segunda</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="mon" data-action="decrease">−</button>
+            <input type="number" data-day="mon" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="mon" data-action="increase">+</button>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <span class="day-label">Terça</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="tue" data-action="decrease">−</button>
+            <input type="number" data-day="tue" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="tue" data-action="increase">+</button>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <span class="day-label">Quarta</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="wed" data-action="decrease">−</button>
+            <input type="number" data-day="wed" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="wed" data-action="increase">+</button>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <span class="day-label">Quinta</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="thu" data-action="decrease">−</button>
+            <input type="number" data-day="thu" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="thu" data-action="increase">+</button>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <span class="day-label">Sexta</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="fri" data-action="decrease">−</button>
+            <input type="number" data-day="fri" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="fri" data-action="increase">+</button>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <span class="day-label">Sábado</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="sat" data-action="decrease">−</button>
+            <input type="number" data-day="sat" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="sat" data-action="increase">+</button>
+          </div>
+        </div>
+
+        <div class="day-row">
+          <span class="day-label">Domingo</span>
+          <div class="stepper">
+            <button class="stepper-btn" data-day="sun" data-action="decrease">−</button>
+            <input type="number" data-day="sun" min="0" step="1" value="0" />
+            <button class="stepper-btn" data-day="sun" data-action="increase">+</button>
+          </div>
+        </div>
+
+      </div>
+
+      <button id="recalculateCycle" class="primary">
+        Continuar
+      </button>
+
+
+    </section>
+
+    <!-- COLUNA 2 — MATÉRIAS -->
+    <section class="panel subjects-panel">
+      <h2>Matérias</h2>
+
+      <div id="subjectsList"></div>
+
+      <!-- BOTÃO MANTIDO -->
+      <button class="add-subject" id="addSubject">
+        + Adicionar matéria
+      </button>
+    </section>
+
+  </main>
+
+  <script src="ciclos.js"></script>
+</body>
+</html>

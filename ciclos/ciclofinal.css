@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: #eaeaea;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: #b5b5b5;
+}
+
+/* =========================
+   PANELS
+========================= */
+
+.results {
+  display: grid;
+  gap: 32px;
+  max-width: 820px;
+}
+
+.panel {
+  background: #121822;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #1f2a3a;
+}
+
+.panel h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.overview-item {
+  background: #0e1420;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.overview-item .label {
+  font-size: 0.8rem;
+  color: #9aa0aa;
+}
+
+.overview-item strong {
+  font-size: 1.3rem;
+  display: block;
+  margin-top: 6px;
+}
+
+/* =========================
+   MATÉRIAS
+========================= */
+
+.subjects-result {
+  display: grid;
+  gap: 14px;
+}
+
+.subject-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  background: #0e1420;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.subject-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.subject-name {
+  font-weight: 600;
+}
+
+.subject-meta {
+  font-size: 0.8rem;
+  color: #9aa0aa;
+}
+
+.subject-hours {
+  font-weight: 600;
+  color: #7aa2ff;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.actions {
+  margin-top: 40px;
+}
+
+button {
+  background: #7aa2ff;
+  color: #0b0f14;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}

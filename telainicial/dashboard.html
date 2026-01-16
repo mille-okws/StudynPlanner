@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Estudos</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+<main class="dashboard">
+
+    <section class="bento tempo-estudo bento-large">
+        <h2>Tempo Estudado Hoje</h2>
+
+        <div class="timer-wrapper">
+            <div class="timer">02:45:00</div>
+        </div>
+
+        <a href="foco.html" class="btn-estudar">Começar a Estudar</a>
+    </section>
+
+    <section class="bento ofensiva-estudos highlight">
+        <span class="label">Dias Seguidos</span>
+        <span class="valor">🔥 12</span>
+    </section>
+
+  <section class="bento metas-dia">
+    <h2>Meta de Hoje</h2>
+    <ul class="lista-metas">
+      <li><label><input type="checkbox"> Revisar Atos Administrativos</label></li>
+      <li><label><input type="checkbox"> 20 questões de Logística</label></li>
+      <li><label><input type="checkbox"> Ler PDF de Inglês</label></li>
+    </ul>
+  </section>
+
+  <section class="bento desempenho-geral">
+    <h2>Desempenho Geral</h2>
+    <div class="stat-item">
+      <span class="label">Questões Respondidas</span>
+      <span class="valor">1.250</span>
+    </div>
+    <div class="stat-item">
+      <span class="label">Acertos</span>
+      <span class="valor">78%</span>
+    </div>
+  </section>
+
+  <section class="bento materias-frequentes">
+    <h2>Matérias Mais Estudadas</h2>
+    <canvas id="radarMaterias" width="300" height="300"></canvas>
+  </section>
+
+  <section class="bento proximos-eventos">
+    <h2>Próximos Eventos</h2>
+    <ul class="lista-eventos">
+      <li>Simulado Geral — 15/11</li>
+      <li>Revisão Const. — 20/11</li>
+      <li>Prova Oficial — 01/12</li>
+    </ul>
+  </section>
+
+  <section class="bento progresso-edital bento-wide">
+    <h2>Progresso no Edital</h2>
+
+    <div class="materia">
+      <span>Português</span>
+      <div class="barra-fundo">
+        <div class="barra-progresso" style="width: 75%">75%</div>
+      </div>
+    </div>
+
+    <div class="materia">
+      <span>Matemática</span>
+      <div class="barra-fundo">
+        <div class="barra-progresso" style="width: 40%">40%</div>
+      </div>
+    </div>
+
+    <div class="materia">
+      <span>Direito Constitucional</span>
+      <div class="barra-fundo">
+        <div class="barra-progresso" style="width: 20%">20%</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

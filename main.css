@@ -1,0 +1,108 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* =========================
+   VARIÁVEIS
+========================= */
+:root {
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --card-border: rgba(255,255,255,0.08);
+  --radius: 12px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   CARDS CONTAINER
+========================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* desktop: 4 cards lado a lado */
+  gap: 1.5rem;
+  overflow: visible;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  min-height: 200px;
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  line-height: 1.5;
+}
+
+/* =========================
+   TABLET / MOBILE SWIPE
+========================= */
+@media (max-width: 1024px) {
+  .cards {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+
+  .card {
+    min-width: 60%; /* Tablet: vários visíveis */
+    scroll-snap-align: center;
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    min-width: 88%; /* Mobile: swipe completo */
+  }
+}

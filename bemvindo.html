@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bem-vindo ao Studyn Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="bemvindo.css">
+</head>
+
+<body>
+
+  <main class="landing-container">
+
+    <!-- BLOCO PRINCIPAL -->
+    <section class="hero">
+
+      <span class="badge">Primeiro acesso</span>
+
+      <h1>
+        Vamos estruturar<br>
+        seu plano de estudos
+      </h1>
+
+      <p class="subtitle">
+        Antes de começar, precisamos entender seu objetivo.<br>
+        Isso permite montar um planner coerente desde o início.
+      </p>
+
+      <form class="onboarding-form">
+
+        <label for="nome">
+          Como podemos te chamar?
+        </label>
+
+        <input 
+          type="text" 
+          id="nome" 
+          name="nome"
+          placeholder="Digite seu nome"
+          autocomplete="given-name"
+          required
+        >
+
+        <label for="objetivo">
+          Para que você estuda?
+        </label>
+
+        <select id="objetivo" name="objetivo" required>
+          <option value="" disabled selected>
+            Selecione uma opção
+          </option>
+          <option value="enem">ENEM</option>
+          <option value="fuvest">FUVEST</option>
+          <option value="ita-ime">ITA / IME</option>
+          <option value="colegio-naval">Colégio Naval</option>
+          <option value="escola-naval">Escola Naval</option>
+          <option value="efomm">EFOMM</option>
+          <option value="afa">AFA</option>
+          <option value="outros">Outros</option>
+        </select>
+
+        <button type="submit">
+          Continuar configuração →
+        </button>
+
+      </form>
+
+      <p class="helper-text">
+        Leva menos de um minuto. Você pode ajustar tudo depois.
+      </p>
+
+    </section>
+
+    <!-- BLOCO DE CONTEXTO -->
+    <section class="context">
+
+      <ul class="benefits">
+        <li>
+          <strong>Planejamento inteligente</strong><br>
+          Um ciclo de estudos ajustado ao seu objetivo real.
+        </li>
+        <li>
+          <strong>Execução sem ruído</strong><br>
+          Menos decisões diárias, mais foco.
+        </li>
+        <li>
+          <strong>Evolução mensurável</strong><br>
+          Progresso visível, não só horas acumuladas.
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+  <script src="bemvindo.js"></script>
+</body>
+</html>

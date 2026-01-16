@@ -1,0 +1,204 @@
+/* bemvindo.css — Studyn Planner */
+/* Base conceitual: minimalista, foco cognitivo, zero ruído visual */
+
+:root {
+  --bg: #0e1116;
+  --card: #151a21;
+  --text-main: #eaeef3;
+  --text-muted: #9aa4b2;
+  --accent: #5eead4;
+  --accent-soft: rgba(94, 234, 212, 0.15);
+  --border: rgba(255, 255, 255, 0.08);
+  --error: #f87171;
+  --radius: 14px;
+  --transition: 0.25s ease;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    1200px 600px at top center,
+    #121826,
+    var(--bg)
+  );
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* LAYOUT */
+.landing-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+}
+
+/* HERO */
+.hero {
+  background: var(--card);
+  padding: 3rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+/* FORM */
+.onboarding-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.onboarding-form label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.onboarding-form input,
+.onboarding-form select {
+  background: #0b0f14;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.onboarding-form input::placeholder {
+  color: #6b7280;
+}
+
+.onboarding-form input:focus,
+.onboarding-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+/* SELECT custom */
+.onboarding-form select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+    linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 13px) calc(50% - 3px);
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+/* BUTTON */
+.onboarding-form button {
+  margin-top: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    #38bdf8
+  );
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #021816;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.onboarding-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(94, 234, 212, 0.35);
+}
+
+.onboarding-form button:active {
+  transform: translateY(0);
+}
+
+/* HELP TEXT */
+.helper-text {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* CONTEXT */
+.context {
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.benefits li strong {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.benefits li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .landing-container {
+    grid-template-columns: 1fr;
+    padding: 2.5rem 1.2rem;
+  }
+
+  .context {
+    padding: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}

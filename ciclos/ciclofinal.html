@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resultado do Ciclo — Studyn Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="ciclofinal.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Resultado do seu Ciclo de Estudos</h1>
+    <p>
+      Este é o resumo final do seu planejamento semanal, considerando
+      dificuldade percebida e distribuição de tempo.
+    </p>
+  </header>
+
+  <main class="results">
+
+    <!-- VISÃO GERAL -->
+    <section class="panel overview">
+      <h2>Visão geral</h2>
+
+      <div class="overview-grid">
+        <div class="overview-item">
+          <span class="label">Horas semanais</span>
+          <strong id="totalHours">0h</strong>
+        </div>
+
+        <div class="overview-item">
+          <span class="label">Total de matérias</span>
+          <strong id="totalSubjects">0</strong>
+        </div>
+
+        <div class="overview-item">
+          <span class="label">Média de dificuldade</span>
+          <strong id="averageDifficulty">–</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTADO POR MATÉRIA -->
+    <section class="panel subjects">
+      <h2>Distribuição por matéria</h2>
+
+      <div id="subjectsResult" class="subjects-result"></div>
+    </section>
+
+  </main>
+
+<footer class="actions">
+  <button onclick="window.location.href='/main.html'">
+    Começar a estudar
+  </button>
+</footer>
+
+  <script src="ciclofinal.js"></script>
+</body>
+</html>

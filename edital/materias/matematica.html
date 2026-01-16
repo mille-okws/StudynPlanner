@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Matemática - Studyn Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Matemática</h1>
+    <p>Checklist de tópicos para estudo</p>
+  </header>
+
+  <!-- Barra de progresso -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+    <span id="progress-text">0%</span>
+  </div>
+
+  <main data-materia="matematica">
+    <!-- Checklist será gerada aqui -->
+    <section id="checklist"></section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Studyn Planner ©</span>
+  </footer>
+
+  <script src="matematica.js"></script>
+</body>
+</html>

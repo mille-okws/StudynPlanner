@@ -1,0 +1,102 @@
+/* =========================
+   BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #0b0f14;
+  color: #eaeaea;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #b5b5b5;
+  margin-bottom: 24px;
+  max-width: 520px;
+}
+
+/* =========================
+   LISTA DE MATÉRIAS
+========================= */
+
+.subjects-container {
+  display: grid;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.subject-card {
+  background: #121822;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #1f2a3a;
+}
+
+.subject-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.difficulty-value {
+  font-size: 0.9rem;
+  color: #7aa2ff;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #7aa2ff;
+}
+
+.difficulty-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #8a8a8a;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.actions {
+  margin-top: 32px;
+}
+
+button {
+  background: #7aa2ff;
+  color: #0b0f14;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
